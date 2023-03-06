@@ -1,16 +1,17 @@
+import { useState } from "react";
+
 export default function EventHandalar () {
 
-let count = 0;
+let [count , setCount] = useState(0);
 function increaseCount () {
-    count ++; // can't rerender browser that why we use state
+    setCount(count = count + 1)
     console.log(count);
 }
 
 function deseaseCount () {
-    count --; // can't rerender browser that why we use state
-    console.log(count);
+    setCount(count = count -1);
+    console.log(count );
 }
-console.log(count);
 
 return (
     <div>
